@@ -11,29 +11,29 @@ import androidx.room.PrimaryKey;
 
 
 
-@Entity(tableName = "museums")
+@Entity(tableName = "toys")
 
 
 
-public class Museum {
+public class Toy {
 
    
 
     @PrimaryKey(autoGenerate = true)
     @NonNull
-    @ColumnInfo(name = "museumId")
+    @ColumnInfo(name = "toyId")
     private int mId;
 
     @Nullable
-    @ColumnInfo(name = "museumName")
+    @ColumnInfo(name = "toyName")
     private String mName;
 
-    private String mStyle;
+    private String mNickName;
 
-    public Museum(@Nullable String name, String style, int score, String creationDate) {
+    public Museum(@Nullable String name, String nickName, int stateOfUse, String creationDate) {
         mName = name;
-        mStyle = style;
-        mScore = score;
+        mNickName = nickName;
+        mStateOfUse = stateOfUse;
         mCreationDate = creationDate;
     }
 
@@ -53,20 +53,20 @@ public class Museum {
         mName = name;
     }
 
-    public String getStyle() {
-        return mStyle;
+    public String getNickName() {
+        return mNickName;
     }
 
-    public void setStyle(String style) {
-        mStyle = style;
+    public void setNickName(String nickName) {
+        mNickName = nickName;
     }
 
-    public int getScore() {
-        return mScore;
+    public int getStateOfUse() {
+        return mStateOfUse;
     }
 
-    public void setScore(int score) {
-        mScore = score;
+    public void setStateOfUse(int StateOfUse) {
+        mStateOfUse = stateOfUse;
     }
 
     public String getCreationDate() {
@@ -77,7 +77,7 @@ public class Museum {
         mCreationDate = creationDate;
     }
 
-    private int mScore;
+    private int mStateOfUse;
     private String mCreationDate;
 
 }
